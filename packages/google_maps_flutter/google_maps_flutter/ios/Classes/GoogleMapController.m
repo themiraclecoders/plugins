@@ -56,6 +56,11 @@ static double ToDouble(NSNumber* data) { return [FLTGoogleMapJsonConversions toD
   FLTPolylinesController* _polylinesController;
   FLTCirclesController* _circlesController;
 }
+- (void)dealloc{
+    // NSLog(@"MApVC dealloc called");
+    // [_mapView removeObserver:self forKeyPath:@"myLocation"];
+    [_mapView removeObserver:self forKeyPath:@"frame"];
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
                viewIdentifier:(int64_t)viewId
