@@ -57,7 +57,7 @@ static double ToDouble(NSNumber* data) { return [FLTGoogleMapJsonConversions toD
   FLTCirclesController* _circlesController;
 }
 - (void)dealloc{
-    // NSLog(@"MApVC dealloc called");
+    NSLog(@"MApVC dealloc called 22");
     // [_mapView removeObserver:self forKeyPath:@"myLocation"];
     [_mapView removeObserver:self forKeyPath:@"frame"];
 }
